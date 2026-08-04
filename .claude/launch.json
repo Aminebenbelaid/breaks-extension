@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Run (debug)",
+      "runtimeExecutable": "swift",
+      "runtimeArgs": ["run", "--package-path", "/Users/abe/Claude/breaks-macos"],
+      "port": null
+    },
+    {
+      "name": "Build release + DMG",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["/Users/abe/Claude/breaks-macos/build-app.sh"],
+      "port": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width: 360px; height: 600px; background: linear-gradient(135deg, #0d2137 0%, #0a3d5c 50%, #0d4f4f 100%); color: #dde8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
+.view { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; transform: translateX(100%); transition: transform .25s ease; opacity: 0; pointer-events: none; }
+.view.active { transform: translateX(0); opacity: 1; pointer-events: all; }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 14px; }
+.logo { font-size: 16px; font-weight: 600; color: #d4af37; letter-spacing: 1px; }
+.icon-btn { background: none; border: none; color: #8899aa; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 4px 2px; }
+.icon-btn:hover { color: #ccc; }
+.save-btn { background: none; border: none; color: #d4af37; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px; }
+.save-btn.saved { color: #4ecdc4; }
+.rings-row { display: flex; justify-content: center; gap: 16px; padding: 0 20px; }
+.ring-wrap { position: relative; width: 140px; height: 140px; }
+.ring-svg { width: 140px; height: 140px; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: rgba(255,255,255,.07); stroke-width: 7; }
+.ring-fill { fill: none; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 364.4; stroke-dashoffset: 364.4; transition: stroke-dashoffset 1s linear; }
+.micro-fill { stroke: #4ecdc4; }
+.long-fill { stroke: #d4af37; }
+.ring-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.ring-time { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; }
+.ring-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.micro-label { color: rgba(78,205,196,.7); }
+.long-label { color: rgba(212,175,55,.7); }
+.status-row { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 0; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ecdc4; }
+.status-dot.paused { background: #e07a5f; }
+.status-text { font-size: 11px; color: #6b8a9e; }
+.actions-row { display: flex; gap: 10px; padding: 0 20px; }
+.btn { flex: 1; padding: 12px; border: none; border-radius: 10px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity .15s; }
+.btn:hover { opacity: .85; }
+.btn-secondary { background: rgba(255,255,255,.08); color: #ccc; }
+.btn-primary { background: linear-gradient(90deg, #d4af37, #b8962e); color: #0d2137; }
+.break-picker { display: flex; gap: 8px; padding: 8px 20px 0; }
+.break-picker.hidden { display: none; }
+.pick-btn { flex: 1; padding: 7px; border: 1px solid rgba(212,175,55,.3); border-radius: 6px; background: rgba(212,175,55,.08); color: #d4af37; font-size: 11px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.pick-btn:hover { background: rgba(212,175,55,.16); }
+.spacer { flex: 1; }
+.stats-bar { display: flex; align-items: stretch; background: rgba(0,0,0,.15); border-top: 1px solid rgba(255,255,255,.06); }
+.stat-cell { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 0; }
+.stat-num { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat-lbl { font-size: 10px; color: #6b8a9e; margin-top: 3px; }
+.stat-div { width: 1px; background: rgba(255,255,255,.06); margin: 10px 0; }
+.teal { color: #4ecdc4; } .amber { color: #f0a050; } .red { color: #e07a5f; }
+.tabs-row { display: flex; gap: 6px; padding: 0 14px 8px; overflow-x: auto; scrollbar-width: none; }
+.tabs-row::-webkit-scrollbar { display: none; }
+.tab { border: 1px solid transparent; border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; background: rgba(255,255,255,.04); color: #8899aa; font-family: inherit; white-space: nowrap; }
+.tab.active { background: rgba(212,175,55,.12); color: #d4af37; border-color: rgba(212,175,55,.3); font-weight: 600; }
+.tab-content { flex: 1; overflow-y: auto; padding: 14px; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.1) transparent; }
+.card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.card-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #5a7a8a; margin-bottom: 10px; }
+.s-row { display: flex; align-items: center; gap: 8px; padding: 4px 0; }
+.s-label { flex: 1; font-size: 12px; color: #c8d8e4; }
+.num-input { width: 52px; background: rgba(255,255,255,.07); border: none; border-radius: 5px; color: #d4af37; font-size: 13px; font-weight: 600; text-align: right; padding: 3px 6px; font-family: inherit; font-variant-numeric: tabular-nums; }
+.num-input:focus { outline: 1px solid rgba(212,175,55,.4); border: none; }
+.unit { font-size: 11px; color: #5a7a8a; min-width: 22px; }
+.stepper { display: flex; flex-direction: column; gap: 1px; }
+.stepper button { background: rgba(255,255,255,.07); border: none; border-radius: 3px; color: #8899aa; cursor: pointer; font-size: 9px; padding: 2px 5px; line-height: 1; }
+.stepper button:hover { color: #ccc; }
+.toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+.toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+.toggle-track { position: absolute; inset: 0; border-radius: 20px; background: rgba(255,255,255,.12); cursor: pointer; transition: .2s; }
+.toggle input:checked + .toggle-track { background: #4ecdc4; }
+.toggle-track::after { content: ''; position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: .2s; }
+.toggle input:checked + .toggle-track::after { left: 18px; }
+.setting-select { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 5px; color: #d4af37; font-size: 12px; padding: 4px 6px; cursor: pointer; font-family: inherit; }
+.setting-select option { background: #0d2137; color: #dde8f0; }
+.color-well { width: 36px; height: 28px; border: 1px solid rgba(255,255,255,.15); border-radius: 5px; cursor: pointer; padding: 0; }
+.text-input { flex: 1; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 5px; color: #dde8f0; font-size: 12px; padding: 5px 8px; font-family: inherit; }
+.text-input::placeholder { color: #5a7a8a; }
+.text-input:focus { outline: 1px solid rgba(212,175,55,.4); }
+.add-btn { background: none; border: none; color: #d4af37; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 6px; }
+.custom-list { margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
+.custom-item { display: flex; align-items: center; background: rgba(255,255,255,.04); border-radius: 5px; padding: 6px 8px; gap: 6px; }
+.custom-item span { flex: 1; font-size: 11px; color: #b0c8d8; line-height: 1.4; }
+.del-btn { background: none; border: none; color: rgba(224,122,95,.6); cursor: pointer; font-size: 16px; line-height: 1; padding: 0 2px; }
+.days-row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.day-btn { width: 30px; height: 26px; border-radius: 4px; border: none; background: rgba(255,255,255,.07); color: #8899aa; font-size: 10px; font-weight: 600; cursor: pointer; font-family: inherit; }
+.day-btn.on { background: #d4af37; color: #0d2137; }
+.s-stat-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; }
+.s-stat-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.s-stat-label { flex: 1; font-size: 12px; color: #c8d8e4; }
+.s-stat-val { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.reset-btn { width: 100%; background: none; border: none; color: rgba(224,122,95,.7); font-size: 11px; cursor: pointer; margin-top: 8px; padding: 6px; font-family: inherit; }
+.preview-btn { width: 100%; padding: 9px; background: rgba(78,205,196,.1); border: 1px dashed rgba(78,205,196,.25); border-radius: 7px; color: #4ecdc4; font-size: 12px; font-weight: 500; cursor: pointer; margin-top: 4px; font-family: inherit; }
+.preview-btn:hover { background: rgba(78,205,196,.18); }
+.s-divider { height: 1px; background: rgba(255,255,255,.06); margin: 8px 0; }
+.hint { font-size: 10px; color: #5a7a8a; margin-bottom: 6px; }

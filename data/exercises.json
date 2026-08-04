@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "name": "20-20-20 Rule",
+    "duration": "micro",
+    "steps": [
+      "Look away from your screen and find an object at least 20 feet away.",
+      "Focus on that distant object for 20 seconds.",
+      "Blink several times to re-moisten your eyes.",
+      "Return your gaze to the screen."
+    ],
+    "category": "eyes"
+  },
+  {
+    "id": 2,
+    "name": "Eye Circles",
+    "duration": "micro",
+    "steps": [
+      "Close your eyes gently and relax your face.",
+      "Slowly roll your eyes in a clockwise circle 5 times.",
+      "Reverse direction and roll counterclockwise 5 times.",
+      "Open your eyes and blink rapidly for a few seconds."
+    ],
+    "category": "eyes"
+  },
+  {
+    "id": 3,
+    "name": "Neck Rolls",
+    "duration": "micro",
+    "steps": [
+      "Sit up straight and drop your chin toward your chest.",
+      "Slowly roll your head to the right, bringing your ear toward your shoulder.",
+      "Continue the circle by tilting your head back gently.",
+      "Roll to the left side and back to center. Repeat 3 times each direction."
+    ],
+    "category": "neck"
+  },
+  {
+    "id": 4,
+    "name": "Wrist Flexor Stretch",
+    "duration": "micro",
+    "steps": [
+      "Extend your right arm straight out with the palm facing up.",
+      "Use your left hand to gently pull the fingers of your right hand downward.",
+      "Hold for 15 seconds, feeling the stretch along the inner forearm.",
+      "Switch to the left arm and repeat."
+    ],
+    "category": "wrists"
+  },
+  {
+    "id": 5,
+    "name": "Wrist Extensor Stretch",
+    "duration": "micro",
+    "steps": [
+      "Extend your right arm straight out with the palm facing down.",
+      "Use your left hand to gently press the back of your right hand downward.",
+      "Hold for 15 seconds, feeling the stretch along the outer forearm.",
+      "Switch to the left arm and repeat."
+    ],
+    "category": "wrists"
+  },
+  {
+    "id": 6,
+    "name": "Shoulder Shrugs",
+    "duration": "micro",
+    "steps": [
+      "Sit or stand with your arms relaxed at your sides.",
+      "Raise both shoulders up toward your ears as high as you can.",
+      "Hold at the top for 3 seconds, squeezing tightly.",
+      "Drop your shoulders back down and relax. Repeat 8 times."
+    ],
+    "category": "shoulders"
+  },
+  {
+    "id": 7,
+    "name": "Seated Spinal Twist",
+    "duration": "micro",
+    "steps": [
+      "Sit up tall with both feet flat on the floor.",
+      "Place your right hand on the outside of your left knee.",
+      "Gently twist your torso to the left, looking over your left shoulder.",
+      "Hold for 15 seconds, then return to center.",
+      "Repeat on the other side."
+    ],
+    "category": "back"
+  },
+  {
+    "id": 8,
+    "name": "Desk Push-Ups",
+    "duration": "micro",
+    "steps": [
+      "Place your hands shoulder-width apart on the edge of your desk.",
+      "Step your feet back until your body forms a straight line at an angle.",
+      "Lower your chest toward the desk by bending your elbows.",
+      "Push back up to the starting position. Repeat 10 times."
+    ],
+    "category": "full-body"
+  },
+  {
+    "id": 9,
+    "name": "Chin Tucks",
+    "duration": "micro",
+    "steps": [
+      "Sit up straight and look directly ahead.",
+      "Gently draw your chin straight back, creating a double chin.",
+      "Hold for 5 seconds, feeling the stretch at the base of your skull.",
+      "Release and repeat 8 times."
+    ],
+    "category": "neck"
+  },
+  {
+    "id": 10,
+    "name": "Seated Leg Extensions",
+    "duration": "micro",
+    "steps": [
+      "Sit up straight with your feet flat on the floor.",
+      "Extend your right leg out straight until it is parallel with the floor.",
+      "Hold for 5 seconds, squeezing your quadricep.",
+      "Lower slowly and repeat with the left leg. Do 8 reps per side."
+    ],
+    "category": "legs"
+  },
+  {
+    "id": 11,
+    "name": "Standing Hamstring Stretch",
+    "duration": "long",
+    "steps": [
+      "Stand and place your right heel on a low surface like a stool or chair.",
+      "Keep your right leg straight and flex your foot so your toes point up.",
+      "Hinge forward at your hips with a flat back until you feel a stretch behind your thigh.",
+      "Hold for 30 seconds, breathing deeply.",
+      "Switch legs and repeat. Do 2 rounds per side."
+    ],
+    "category": "legs"
+  },
+  {
+    "id": 12,
+    "name": "Wall Chest Stretch",
+    "duration": "long",
+    "steps": [
+      "Stand in a doorway or next to a wall.",
+      "Place your right forearm vertically against the wall with your elbow at shoulder height.",
+      "Step your right foot forward and gently lean through the doorway until you feel a stretch across your chest.",
+      "Hold for 30 seconds, then switch sides.",
+      "Repeat 2 times per side."
+    ],
+    "category": "shoulders"
+  },
+  {
+    "id": 13,
+    "name": "Hip Flexor Stretch",
+    "duration": "long",
+    "steps": [
+      "Step your right foot forward into a lunge position.",
+      "Lower your left knee to the ground (use a folded towel for padding if needed).",
+      "Keep your torso upright and gently push your hips forward.",
+      "Hold for 30 seconds, feeling the stretch in the front of your left hip.",
+      "Switch sides and repeat. Do 2 rounds per side."
+    ],
+    "category": "legs"
+  },
+  {
+    "id": 14,
+    "name": "Calf Raises",
+    "duration": "long",
+    "steps": [
+      "Stand behind your chair and lightly hold the back for balance.",
+      "Rise up onto the balls of both feet, lifting your heels as high as possible.",
+      "Hold at the top for 2 seconds.",
+      "Lower back down slowly. Repeat for 3 sets of 15 reps."
+    ],
+    "category": "legs"
+  },
+  {
+    "id": 15,
+    "name": "Standing Forward Fold",
+    "duration": "long",
+    "steps": [
+      "Stand with your feet hip-width apart.",
+      "Exhale and hinge forward at your hips, letting your arms and head hang heavy.",
+      "Bend your knees slightly if you feel tightness behind your legs.",
+      "Hold for 30 seconds, gently swaying side to side.",
+      "Slowly roll back up to standing one vertebra at a time."
+    ],
+    "category": "back"
+  },
+  {
+    "id": 16,
+    "name": "Cat-Cow Stretch",
+    "duration": "long",
+    "steps": [
+      "Stand with your hands on your knees, or get on all fours if space allows.",
+      "Inhale and arch your back, lifting your chest and tailbone upward (cow).",
+      "Exhale and round your spine, tucking your chin and tailbone under (cat).",
+      "Flow between these two positions slowly for 1 minute.",
+      "Rest in a neutral spine position when finished."
+    ],
+    "category": "back"
+  },
+  {
+    "id": 17,
+    "name": "Full Body Shake-Out",
+    "duration": "long",
+    "steps": [
+      "Stand up and begin shaking your hands loosely at your sides.",
+      "Gradually add movement by shaking your arms, then your shoulders.",
+      "Shake each leg one at a time, then bounce lightly on both feet.",
+      "Let the shaking travel through your whole body for 2 minutes.",
+      "Slow down gradually and take 3 deep breaths to finish."
+    ],
+    "category": "full-body"
+  },
+  {
+    "id": 18,
+    "name": "Walking in Place",
+    "duration": "long",
+    "steps": [
+      "Stand up tall next to your desk with your arms at your sides.",
+      "Begin marching in place, lifting your knees to hip height if comfortable.",
+      "Swing your arms naturally with each step.",
+      "Continue for 2-3 minutes at a brisk pace.",
+      "Slow your pace for the last 30 seconds and take deep breaths."
+    ],
+    "category": "full-body"
+  },
+  {
+    "id": 19,
+    "name": "Stationary Lunges",
+    "duration": "long",
+    "steps": [
+      "Stand with feet hip-width apart, hands on your hips.",
+      "Step your right foot forward and lower your body until both knees form 90-degree angles.",
+      "Push through your right heel to return to standing.",
+      "Alternate legs for 10 reps per side, doing 2 sets.",
+      "Rest for 15 seconds between sets."
+    ],
+    "category": "legs"
+  },
+  {
+    "id": 20,
+    "name": "Wall Squat Hold",
+    "duration": "long",
+    "steps": [
+      "Stand with your back flat against a wall and feet shoulder-width apart.",
+      "Slide down the wall until your thighs are parallel to the floor.",
+      "Keep your knees directly above your ankles and your back pressed into the wall.",
+      "Hold for 30-60 seconds, breathing steadily.",
+      "Slide back up to rest and repeat 3 times."
+    ],
+    "category": "legs"
+  }
+]

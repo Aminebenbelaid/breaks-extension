@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>body { margin: 0; width: 360px; height: 600px; overflow: hidden; }</style>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Main view -->
+  <div id="mainView" class="view active">
+    <div class="header">
+      <span class="logo">Breaks</span>
+      <button id="settingsBtn" class="icon-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        Settings
+      </button>
+    </div>
+
+    <div class="rings-row">
+      <div class="ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 140 140">
+          <circle class="ring-track" cx="70" cy="70" r="58"/>
+          <circle class="ring-fill micro-fill" id="microRing" cx="70" cy="70" r="58"/>
+        </svg>
+        <div class="ring-inner">
+          <span class="ring-time" id="microTime">--:--</span>
+          <span class="ring-label micro-label">Micro</span>
+        </div>
+      </div>
+      <div class="ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 140 140">
+          <circle class="ring-track" cx="70" cy="70" r="58"/>
+          <circle class="ring-fill long-fill" id="longRing" cx="70" cy="70" r="58"/>
+        </svg>
+        <div class="ring-inner">
+          <span class="ring-time" id="longTime">--:--</span>
+          <span class="ring-label long-label">Long</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-row">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">Running</span>
+    </div>
+
+    <div class="actions-row">
+      <button id="pauseBtn" class="btn btn-secondary">
+        <span id="pauseIcon">⏸</span> <span id="pauseLabel">Pause</span>
+      </button>
+      <button id="breakNowBtn" class="btn btn-primary">Take a Break</button>
+    </div>
+    <div id="breakTypePicker" class="break-picker hidden">
+      <button class="pick-btn" data-type="micro">Micro Break</button>
+      <button class="pick-btn" data-type="long">Long Break</button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="stats-bar">
+      <div class="stat-cell">
+        <span class="stat-num teal" id="statTaken">0</span>
+        <span class="stat-lbl">Taken</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-cell">
+        <span class="stat-num amber" id="statPostponed">0</span>
+        <span class="stat-lbl">Postponed</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-cell">
+        <span class="stat-num red" id="statSkipped">0</span>
+        <span class="stat-lbl">Skipped</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings view -->
+  <div id="settingsView" class="view">
+    <div class="header">
+      <button id="backBtn" class="icon-btn">← Back</button>
+      <span class="logo">Settings</span>
+      <button id="saveBtn" class="save-btn">Save</button>
+    </div>
+
+    <div class="tabs-row">
+      <button class="tab active" data-tab="timers">Timers</button>
+      <button class="tab" data-tab="look">Look</button>
+      <button class="tab" data-tab="content">Content</button>
+      <button class="tab" data-tab="schedule">Schedule</button>
+      <button class="tab" data-tab="stats">Stats</button>
+    </div>
+
+    <div class="tab-content" id="tabContent"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
